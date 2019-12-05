@@ -16,6 +16,9 @@ def convert24(date):
     elif date[-2:] == "PM" and date[:2] == "12": 
         return date[:-2] 
         
-    else:             
+    elif date[-2:] == "PM":             
         # add 12 to hours and remove PM 
         return str(int(date[:2]) + 12) + date[2:5]
+    
+    else:
+        return "Date should be in am/pm format"
